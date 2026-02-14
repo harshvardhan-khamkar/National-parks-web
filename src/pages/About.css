@@ -1,0 +1,114 @@
+.about-page {
+    padding-top: 70px;
+}
+
+.about-hero {
+    background: var(--gradient-primary);
+    color: white;
+    padding: var(--space-3xl) 0 var(--space-2xl);
+    text-align: center;
+}
+
+.about-content {
+    padding: var(--space-3xl) 0;
+}
+
+.content-card {
+    background: white;
+    padding: var(--space-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--space-2xl);
+}
+
+.content-card h2 {
+    color: var(--primary-700);
+    margin-bottom: var(--space-lg);
+    font-size: var(--font-size-3xl);
+}
+
+.content-card p {
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    color: var(--neutral-700);
+    margin-bottom: var(--space-lg);
+}
+
+.content-card p:last-child {
+    margin-bottom: 0;
+}
+
+.mission-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mission-list li {
+    padding: var(--space-md) 0;
+    padding-left: var(--space-2xl);
+    position: relative;
+    font-size: var(--font-size-lg);
+    color: var(--neutral-700);
+    line-height: 1.8;
+}
+
+.mission-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: var(--space-md);
+    width: 24px;
+    height: 24px;
+    background: var(--primary-100);
+    color: var(--primary-700);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.stats-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+}
+
+.stat-box {
+    background: var(--gradient-primary);
+    color: white;
+    padding: var(--space-2xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-base);
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h3 {
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--space-md);
+    color: white;
+}
+
+.stat-box p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: var(--font-size-base);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .stats-showcase {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-showcase {
+        grid-template-columns: 1fr;
+    }
+}

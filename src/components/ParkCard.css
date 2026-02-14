@@ -1,0 +1,129 @@
+.park-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.park-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-2xl);
+}
+
+.park-card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: var(--neutral-200);
+}
+
+.park-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.park-card:hover .park-card-image {
+    transform: scale(1.08);
+}
+
+.park-card-overlay {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.park-card-content {
+    padding: var(--space-xl);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.park-card-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-700);
+    margin-bottom: var(--space-xs);
+    transition: color var(--transition-fast);
+    line-height: 1.3;
+}
+
+.park-card:hover .park-card-title {
+    color: var(--primary-500);
+}
+
+.park-card-location {
+    color: var(--neutral-600);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.park-card-location::before {
+    content: '📍';
+}
+
+.park-card-description {
+    color: var(--neutral-600);
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+    flex: 1;
+}
+
+.park-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.tag {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    background: var(--primary-100);
+    color: var(--primary-700);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.park-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--neutral-100);
+    margin-top: auto;
+}
+
+.park-card-area {
+    color: var(--neutral-600);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.park-card-link {
+    color: var(--primary-700);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    transition: transform var(--transition-fast);
+    display: inline-block;
+}
+
+.park-card:hover .park-card-link {
+    transform: translateX(4px);
+}
